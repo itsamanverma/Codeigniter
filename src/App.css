@@ -34,7 +34,11 @@
 }
 
 .logincard {
-	padding: 90px
+	padding: 90px;
+	margin-top: 20px;
+	display: inline-block;
+	font-size: 14px;
+    background-image: url(../src/assest/images/cardbackground5.jpg)
 }
 
 .label {
@@ -48,4 +52,31 @@
 
 .formCard {
 	padding: 90px;
+}
+
+.MuiTypography-colorSecondary-61
+{
+	color:#419553;
+}
+
+.RegisterCardContent{
+	padding: 90px;
+}
+.logo{
+	display: flex;
+	justify-content: flex-start;
+}
+.header{
+   color: maroon;
+}
+.formCard{
+	padding:90px;
+	margin-top: 20px;
+	background-image: url(../src/assest/images/cardbackground5.jpg);
+}
+
+.fundoo{
+	color: crimson;
+	text-align: center;
+	font-display:initial;
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Input from '../components/Input';
 import { Card, Typography, Button, CardContent } from '@material-ui/core/';
 // import red from '@material-ui/core/colors/red'
-class Register extends Component {
+export default class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -108,11 +108,14 @@ class Register extends Component {
         //console.log("email", this.state.email);
 
         return (
-            <div >
-                <Card class='formcard'>
-                    <CardContent>
+            <div style={{
+                display: "flex",
+                justifyContent: "center"
+            }}>
+                <Card className='formcard'>
+                    <CardContent className='RegisterCardContent'>
                         <div >
-                            <Typography variant="h5" component="h2" className='login' color='primary' id='card-heading' >Register</Typography>
+                            <Typography variant="h5" component="h2" className='login' color='secondary' id='card-heading' >Register</Typography>
                             <div className='form'>
                                 <div>
                                     <Input name={'firstname'} type={'text'} placeholder={'Enter First Name'} label={'First name'} onChange={this.getDataFromInput} />
@@ -147,4 +150,3 @@ class Register extends Component {
     }
 }
 
-export default Register;

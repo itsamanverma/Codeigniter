@@ -6,6 +6,7 @@ import { BrowserRouter as Router,Route } from "react-router-dom";
 import "./App.css"
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
 
 
 class App extends Component{
@@ -13,9 +14,10 @@ class App extends Component{
      return(
         <Router>
          <div className="app">
-           <Route name="app" path="/"   handler={App}></Route>
+           <Route path='/' exact component={Login}></Route>
            <Route path='/login' component={Login}></Route>
-           < Route path ='/register' component={Register}></Route>
+           < Route path='/register' component={Register}></Route>
+           <Route path='/forgotpassword' component={ForgotPassword}></Route>
          </div>
        </Router>
 
