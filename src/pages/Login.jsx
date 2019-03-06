@@ -59,7 +59,6 @@ export default class Login extends Component {
 
     render() {
         return (
-           
             <div style={{
                 display: "flex",
                 justifyContent: "center"
