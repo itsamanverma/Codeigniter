@@ -7,6 +7,7 @@ import "./App.css"
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
+import Inline from "./components/Inline";
 // import Stylesheet from "./components/Stylesheet";
 // import NameList from "./components/NameList";
 // import ParentComponent from "./components/ParentComponent";
@@ -25,6 +26,7 @@ class App extends Component{
      return(
         <Router>
          <div className="app">
+           <Inline />
            {/* <Stylesheet primary={true} /> */}
            {/* <NameList /> */}
            {/* <Counter /> */}
