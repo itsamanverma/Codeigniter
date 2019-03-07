@@ -7,6 +7,17 @@ import "./App.css"
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
+// import Stylesheet from "./components/Stylesheet";
+// import NameList from "./components/NameList";
+// import ParentComponent from "./components/ParentComponent";
+// import UserGreeting from "./components/UserGreeting";
+// import EventBind from "./components/EventBind";
+// import FunctionClick from "./components/FunctionClick";
+// import ClassClick from "./components/ClassClick";
+// import Welcome from "./components/Welcome";
+// import Greet from "./components/Greet";
+//import Message from "./components/Message";
+//import Counter from "./components/Counter";
 
 
 class App extends Component{
@@ -14,6 +25,17 @@ class App extends Component{
      return(
         <Router>
          <div className="app">
+           {/* <Stylesheet primary={true} /> */}
+           {/* <NameList /> */}
+           {/* <Counter /> */}
+           {/* <Message /> */}
+           {/* <Welcome name ="Aayushi" heroName="spider-man"></Welcome> */}
+           {/* <Greet name="swarna" heroName ="superman"></Greet> */}
+           {/* <FunctionClick /> */}
+           {/* <ClassClick /> */}
+           {/* <EventBind /> */}
+           {/* <ParentComponent /> */}
+           {/* <UserGreeting /> */}
            <Route path='/' exact component={Login}></Route>
            <Route path='/login' component={Login}></Route>
            < Route path='/register' component={Register}></Route>

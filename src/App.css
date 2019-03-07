@@ -68,6 +68,8 @@
 }
 .header{
    color: maroon;
+   text-align: center;
+   font: outline;
 }
 .formCard{
 	padding:90px;
