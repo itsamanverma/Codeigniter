@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from '../components/Input';
 import { Card, Typography, Button, CardContent } from '@material-ui/core/';
+import { Link } from 'react-router-dom';
 // import red from '@material-ui/core/colors/red'
 export default class Register extends Component {
     constructor(props) {
@@ -140,7 +141,7 @@ export default class Register extends Component {
                                 <div class='register-btn-div'>
                                     <Button onClick={this.handleClick} className='register-btn' variant="contained" color="primary" type="submit">Submit</Button>
                                 </div>
-                                <span><Typography class='reg-text-login'>Already have an account <a href="/login">Login</a></Typography></span>
+                                <span><Typography class='reg-text-login'>Already have an account <Link to="/login">Login</Link></Typography></span>
                             </div>
                         </div>
                     </CardContent>
