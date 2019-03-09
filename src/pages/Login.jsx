@@ -16,6 +16,7 @@ export default class Login extends Component {
         this.getDataFromInput = this.getDataFromInput.bind(this);
         this.validate = this.validate.bind(this);
         // This binding is necessary to make `this` work in the callback
+        this.handleClick = this.handleClick.bind(this)
 
     }
 
@@ -56,6 +57,14 @@ export default class Login extends Component {
         })
     }
     
+    // handleClick = () => {
+    //     if (this.validate()) {
+    //         let data = {
+    //             email: this.state.email,
+    //             password:this.state.password
+    //         }
+    //     }
+    // }
 
     render() {
         return (

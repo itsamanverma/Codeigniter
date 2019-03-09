@@ -7,7 +7,10 @@ import "./App.css"
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
-import Form from "./components/Form";
+import PostList from "./components/PostList";
+// import PostForm from "./components/PostForm";
+// import LifecycleA from "./components/LifecycleA";
+// import Form from "./components/Form";
 // import Inline from "./comzponents/Inline";
 // import Stylesheet from "./components/Stylesheet";
 // import NameList from "./components/NameList";
@@ -27,7 +30,8 @@ class App extends Component{
      return(
         <Router>
          <div className="app">
-           <Form />
+           {/* <LifecycleA /> */}
+           {/* <Form /> */}
            {/* <Inline /> */}
            {/* <Stylesheet primary={true} /> */}
            {/* <NameList /> */}
@@ -40,6 +44,8 @@ class App extends Component{
            {/* <EventBind /> */}
            {/* <ParentComponent /> */}
            {/* <UserGreeting /> */}
+           <PostList />
+           {/* <PostForm /> */}
            <Route path='/' exact component={Login}></Route>
            <Route path='/login' component={Login}></Route>
            < Route path='/register' component={Register}></Route>
