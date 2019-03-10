@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Input from "../components/Input";
 import { Card, Typography, Button, CardContent } from "@material-ui/core/";
 import { Link } from 'react-router-dom';
-//import FacebookLogin from '../components/FacebookLogin'
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +15,7 @@ export default class Login extends Component {
         this.getDataFromInput = this.getDataFromInput.bind(this);
         this.validate = this.validate.bind(this);
         // This binding is necessary to make `this` work in the callback
-        this.handleClick = this.handleClick.bind(this)
+        // this.handleClick = this.handleClick.bind(this)
 
     }
 
