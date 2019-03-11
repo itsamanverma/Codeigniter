@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import PasswordReset from "./pages/PasswordReset";
+import EmailVerification from "./pages/EmailVerfication";
 // import PostList from "./components/PostList";
 // import PostForm from "./components/PostForm";
 // import LifecycleA from "./components/LifecycleA";
@@ -51,7 +52,8 @@ class App extends Component{
            <Route path='/login' component={Login}></Route>
            < Route path='/register' component={Register}></Route>
            <Route path='/forgotpassword' component={ForgotPassword}></Route>
-           <Route path ='/passwordreset' component={PasswordReset}></Route>
+           <Route path='/passwordreset' component={PasswordReset}></Route>
+           <Route path ='/EmailVerification' component={EmailVerification}></Route>
          </div>
        </Router>
 
