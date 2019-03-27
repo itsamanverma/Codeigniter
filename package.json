@@ -1,5 +1,8 @@
 {
   "name": "reactjs",
+  "jest": {
+    "verbose": true
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,7 +34,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.5.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2"
+    "enzyme-adapter-react-16": "^1.11.2",
+    "jest": "^23.6.0"
   }
 }
