@@ -6,10 +6,10 @@ export default class UserService {
      * @param {array} data
      */
     login(data) {
-        return axios.post('http://localhost/codeigniter/login', data)
+         return axios.post('http://localhost/codeigniter/login', data)
             .then(response => {
                 if (response.status === 200) {
-                    localStorage.setItem('token', response.data.token);
+                     localStorage.setItem('token', response.data.token);
                     localStorage.setItem('username', response.data.userdetails.firstName + ' ' + response.data.userdetails.lastName);
                 }
                 return response;
