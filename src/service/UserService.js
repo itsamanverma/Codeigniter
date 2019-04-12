@@ -6,10 +6,10 @@ export default class UserService {
      * @param {array} data
      */
     login(data) {
-         return axios.post('http://localhost/codeigniter/login', data)
+         return axios.post('/api/login', data)
             .then(response => {
                 if (response.status === 200) {
-                     localStorage.setItem('token', response.data.token);
+                    localStorage.setItem('token', response.data.token);
                     localStorage.setItem('username', response.data.userdetails.firstName + ' ' + response.data.userdetails.lastName);
                 }
                 return response;
@@ -24,7 +24,7 @@ export default class UserService {
      */
 
     register(data) {
-        return axios.post('http://localhost/codeigniter/register', data)
+        return axios.post('/api/register', data)
             .then((response) => {
                 console.log("resps", response);
                 return response;
@@ -33,4 +33,5 @@ export default class UserService {
                 return error;
             });
     }
+    
 }
