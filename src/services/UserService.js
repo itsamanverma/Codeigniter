@@ -6,7 +6,7 @@ export default class UserService {
      * @param {array} data
      */
     login(data) {
-         return axios.post('/api/login', data)
+         return axios.post('http://localhost:8000/api/login', data)
             .then(response => {
                 if (response.status === 200) {
                     localStorage.setItem('token', response.data.token);

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import Input from "../components/Input";
 import { Card, Typography, Button, CardContent } from "@material-ui/core/";
+
 import { Link } from 'react-router-dom';
+import UserService from "../services/UserService";
+
+var userService = new UserService();
+
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +20,7 @@ export default class Login extends Component {
         this.getDataFromInput = this.getDataFromInput.bind(this);
         this.validate = this.validate.bind(this);
         // This binding is necessary to make `this` work in the callback
-        // this.handleClick = this.handleClick.bind(this)
+         this.handleClick = this.handleClick.bind(this)
 
     }
 
@@ -55,16 +60,53 @@ export default class Login extends Component {
             [event.target.name]: data
         })
     }
-    
-    // handleClick = () => {
-    //     if (this.validate()) {
-    //         let data = {
-    //             email: this.state.email,
-    //             password:this.state.password
-    //         }
-    //     }
-    // }
 
+     handleClick() {
+    if (this.validate()) {
+      let data = {
+        email: this.state.email,
+        password: this.state.password,
+      }
+      userService.login(data).then(response => {
+        console.log(response);
+        console.log(this.state);
+ 
+        if (response.status === 200) {
+          this.setState({
+            isLoggedIn: true,
+          });
+        }
+        else if (response.status === 204) {
+          this.setState({
+            error: {
+              email: 'invalid credentials',
+            }
+          })
+        }
+        else if (response.status === 211) {
+          localStorage.removeItem('fundootoken');
+          this.props.history.push('/notverified');
+        }
+ 
+ 
+      }
+      ).catch(error => {
+        //console.log("401",error);
+ 
+      });
+    }
+  }
+ 
+//   googleTest = () => {
+//     googleLoginService.googlelogin();
+//   }
+ 
+  changeLoginStatus = () => {
+    this.setState({
+      isLoggedIn: true,
+    });
+  }
+    
     render() {
         return (
             <div style={{
