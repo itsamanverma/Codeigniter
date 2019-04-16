@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import Input from '../components/Input';
 import { Card, Typography, Button, CardContent } from '@material-ui/core/';
-import { Link } from 'react-router-dom';
+import UserService from '../services/UserService';
+// import { Link } from "react-router-dom";
+
 // import red from '@material-ui/core/colors/red'
-export default class Register extends Component {
+
+var userService = new UserService();
+class Register extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,12 +20,13 @@ export default class Register extends Component {
             error: {},
         }
         this.getDataFromInput = this.getDataFromInput.bind(this);
-        // this.handleClick = this.handleClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.validate = this.validate.bind(this);
     }
 
     /**
     * function to get data from the object
+    * 
     * @param {var} data 
     */
     getDataFromInput(event, data) {
@@ -105,6 +110,38 @@ export default class Register extends Component {
     unsetcolor(event) {
         event.target.color = 'error';
     }
+
+    /**
+    * function to handle click of the button of login
+    * 
+    * @param {event} event 
+    */
+    handleClick() {
+
+        if (this.validate()) {
+            const data = {
+                firstname: this.state.firstname,
+                lastname: this.state.lastname,
+                email: this.state.email,
+                password: this.state.password,
+                rpassword: this.state.password,
+            }
+            userService.register(data).then(res => {
+                if (res.status === 210) {
+                    this.setState({
+                        error: {
+                            email: res.data.error.email[0],
+                        }
+                    });
+                }
+                else if (res.status === 201) {
+                    alert('Registration Successfull')
+                }
+
+            }).catch();
+        }
+    }
+
     render() {
         //console.log("email", this.state.email);
 
@@ -112,11 +149,13 @@ export default class Register extends Component {
             <div style={{
                 display: "flex",
                 justifyContent: "center"
-            }}>
-                <Card className='formcard'>
-                    <CardContent className='RegisterCardContent'>
+            }} >
+                <Card id='formcard'>
+                    <CardContent>
                         <div >
-                            <Typography variant="h5" component="h2" className='login' color='secondary' id='card-heading' >Register</Typography>
+                            <Typography variant="h5" component="h2" className='login' color='primary' id='card-heading' >
+                                Register
+                            </Typography>
                             <div className='form'>
                                 <div>
                                     <Input name={'firstname'} type={'text'} placeholder={'Enter First Name'} label={'First name'} onChange={this.getDataFromInput} />
@@ -137,13 +176,17 @@ export default class Register extends Component {
                                 <div>
                                     <Input color={'error'} name={'rpassword'} type={'password'} placeholder={'Confirm PassWord'} label={'Confirm Password'} onChange={this.getDataFromInput} required={true} />
                                     <div className='error'>{this.state.error.rpassword}</div>
-                                </div><br />
-                                <div class='register-btn-div'>
-                                    <Button onClick={this.handleClick} className='register-btn' variant="contained" color="primary" type="submit">Submit</Button>
                                 </div>
-                                <span><Typography class='reg-text-login'>Already have an account <Link to="/login">Login</Link></Typography></span>
+                                <div id='register-btn-div'>
+                                    <Button onClick={this.handleClick} className='register-btn' variant="contained" color="primary" type="submit">
+                                        Submit
+                                    </Button>
+                                </div>
+                                <span><Typography id='reg-text-login'>Already have an account <a href="/login">Login</a></Typography></span>
                             </div>
                         </div>
+
+
                     </CardContent>
                 </Card>
             </div>
@@ -151,3 +194,4 @@ export default class Register extends Component {
     }
 }
 
+export default Register;

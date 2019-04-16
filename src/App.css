@@ -33,7 +33,7 @@
 	}
 }
 
-.logincard {
+#logincard {
 	padding: 90px;
 	margin-top: 20px;
 	display: inline-block;
@@ -41,46 +41,58 @@
 	background-image: url(../src/assest/images/cardbackground5.jpg)
 }
 
-.label {
+#label {
 	width: 10%
 }
 
-.cardContent {
+#cardContent {
 	padding: 20px;
 	width: 250px;
 }
-
-.formCard {
+#formCard {
 	padding: 90px;
 }
 
-.MuiTypography-colorSecondary-61 {
+#MuiTypography-colorSecondary-61 {
 	color: #419553;
 }
 
-.RegisterCardContent {
+#RegisterCardContent {
 	padding: 90px;
 }
 
-.logo {
+#logo {
 	display: flex;
 	justify-content: flex-start;
 }
 
-.header {
+#header {
 	color: maroon;
 	text-align: center;
 	font: outline;
 }
 
-.formCard {
+#formCard {
 	padding: 90px;
 	margin-top: 20px;
 	background-image: url('../src/assest/images/cardbackground5.jpg');
 }
 
-.fundoo {
+#fundoo {
 	color: crimson;
 	text-align: center;
 	font-display: initial;
 }
+.social-login{
+	flex-direction:row;
+
+
+}
+/* .app{
+	padding: 90px;
+	margin-top: 20px;
+	display: inline-block;
+	font-size: 14px;
+	background-image: url(../src/assest/images/cardbackground5.jpg)
+
+} */

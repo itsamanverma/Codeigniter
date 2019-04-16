@@ -1,7 +1,12 @@
 import React from 'react';
 import SocialButton from './SocialLogin';
+import UserService from '../services/UserService';
+
+var userService = new UserService();
+
 
 export default class FacebookLogin extends React.Component {
+
 
     state = {
         logged: false,
@@ -18,14 +23,14 @@ export default class FacebookLogin extends React.Component {
             provider: user.provider,
             providerprofile: user.profile.profilePicURL,
         }
-        // userService.socialLogin(data).then(response => {
-        //     console.log('sociallogin', response);
-        //     //    if(localStorage.getItem('fundootoken')!==null){
-        //     localStorage.setItem('fundootoken', response.data.token);
-        //     localStorage.setItem('username', response.data.userdetails.firstname + ' ' + response.data.userdetails.lastname);
-        //     this.props.changeLoginStatus();
+        userService.socialLogin(data).then(response => {
+            console.log('sociallogin', response);
+            //    if(localStorage.getItem('fundootoken')!==null){
+            localStorage.setItem('fundootoken', response.data.token);
+            localStorage.setItem('username', response.data.userdetails.firstname + ' ' + response.data.userdetails.lastname);
+            this.props.changeLoginStatus();
 
-        // }).catch();
+        }).catch();
     }
 
     handleSocialLoginFailure = (err) => {
@@ -35,13 +40,13 @@ export default class FacebookLogin extends React.Component {
     }
 
 
-    // nodes = {}
+    nodes = {}
 
-    // setNodeRef(provider, node) {
-    //     if (node) {
-    //         this.nodes[provider] = node
-    //     }
-    // }
+    setNodeRef(provider, node) {
+        if (node) {
+            this.nodes[provider] = node
+        }
+    }
 
     render() {
         var button;

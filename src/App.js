@@ -50,10 +50,11 @@ class App extends Component{
            {/* <PostForm /> */}
            <Route path='/' exact component={Login}></Route>
            <Route path='/login' component={Login}></Route>
-           < Route path='/register' component={Register}></Route>
+           <Route path='/register' component={Register}></Route>
            <Route path='/forgotpassword' component={ForgotPassword}></Route>
            <Route path='/passwordreset' component={PasswordReset}></Route>
-           <Route path ='/EmailVerification' component={EmailVerification}></Route>
+           <Route path='/verifyemail/:email' component={EmailVerification}></Route>
+           <Route path='/passwordreset/:token' component={PasswordReset}></Route>
          </div>
        </Router>
 

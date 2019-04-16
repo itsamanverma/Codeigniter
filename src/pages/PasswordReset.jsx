@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Card, Typography, Button, CardContent } from '@material-ui/core/';
-// import axios from "axios";
+import axios from "axios";
 import Input from "../components/Input";
-// import UserService from "../services/UserService";
- 
-// var userservice = new UserService();
+import UserService from "../services/UserService";
+
+var userservice = new UserService();
 export default class EmailVerification extends Component {
     constructor(props) {
         super(props);
@@ -12,88 +12,89 @@ export default class EmailVerification extends Component {
             token: '',
             status: false,
             message: '',
-            password:'',
-            rpassword:''
+            password: '',
+            rpassword: ''
         }
         this.getDataFromInput = this.getDataFromInput.bind(this);
     }
- 
- 
-    getDataFromInput(event ,data) {
+
+
+    getDataFromInput(event, data) {
         // console.log('register', data);
         this.setState({
-          [event.target.name]: data
+            [event.target.name]: data
         })
-      }
- 
-    // componentDidMount() {
-    //     let ptoken = (window.location.pathname).substring(15);
-    // //    / console.log(eemail);
-    //     this.setState({ token: ptoken });
-    // //    / debugger;
-    //     userservice.findToken({token:ptoken})
-    //         .then((response) => {
-    //            if(response.status===200){
-    //             this.setState(
-    //                 {
-    //                     status: true,
-    //                     message: response.data.message,
-    //                 });
-    //            }
-    //            else{
-    //             this.setState(
-    //                 {
-    //                     message: response.data.message,
-    //                 });
-    //            }
-    //             console.log('emaiasasasal', this.state);
-    //         }
-    //         ).catch((error) => {
-    //             // /console.log('rereerrors',error);
-    //         });
-    //     // this.setState(
-    //     //   {
-    //     //     email: eemail,
-    //     //   });
-    //     //   this.forceUpdate();
-    //     // console.log(this.state);
- 
-    // }
- 
-    // handleClick() {
- 
- 
-    //     axios.post('/api/forgotpassword/reset',
-    //      { token: this.state.token,
-    //        password:this.state.password,
-    //        rpassword:this.state.rpassword
-    //     })
-    //         .then((response) => {
-    //             this.setState(
-    //                 {
-    //                     status: true,
-    //                     message: response.data.message,
-    //                 });
-    //             console.log('emaiasasasal', this.state);
-    //         }
-    //         ).catch((error) => {
-    //             // /console.log('rereerrors',error);
-    //         });
-    // }
- 
-    // handleLogin() {
-    //     this.props.history.push('/login');
-    // }
- 
+    }
+
+    componentDidMount() {
+        let ptoken = (window.location.pathname).substring(15);
+        //    / console.log(eemail);
+        this.setState({ token: ptoken });
+        //    / debugger;
+        userservice.findToken({ token: ptoken })
+            .then((response) => {
+                if (response.status === 200) {
+                    this.setState(
+                        {
+                            status: true,
+                            message: response.data.message,
+                        });
+                }
+                else {
+                    this.setState(
+                        {
+                            message: response.data.message,
+                        });
+                }
+                console.log('emaiasasasal', this.state);
+            }
+            ).catch((error) => {
+                // /console.log('rereerrors',error);
+            });
+        // this.setState(
+        //   {
+        //     email: eemail,
+        //   });
+        //   this.forceUpdate();
+        // console.log(this.state);
+
+    }
+
+    handleClick() {
+
+
+        axios.post('/api/forgotpassword/reset',
+            {
+                token: this.state.token,
+                password: this.state.password,
+                rpassword: this.state.rpassword
+            })
+            .then((response) => {
+                this.setState(
+                    {
+                        status: true,
+                        message: response.data.message,
+                    });
+                console.log('emaiasasasal', this.state);
+            }
+            ).catch((error) => {
+                // /console.log('rereerrors',error);
+            });
+    }
+
+    handleLogin() {
+        this.props.history.push('/login');
+    }
+
     render() {
         console.log(this.state.email);
- 
- 
+
+
         return (
- 
+
             <div>
                 <Card id='verify-card'>
- 
+
                     <div className='label-page' >
                         <div className='logo'>
                             <img src={require('../assest/images/logo.svg')} alt="" />
@@ -126,7 +127,7 @@ export default class EmailVerification extends Component {
                     </CardContent>
                 </Card>
             </div>
- 
+
         );
     }
 }
