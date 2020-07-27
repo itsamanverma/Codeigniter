@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "startcustom":"PORT=8000 react-scripts start",
+    "startcustom": "PORT=8000 react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
