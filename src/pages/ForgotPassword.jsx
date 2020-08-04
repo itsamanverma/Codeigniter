@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Input from "../components/Input"
 import { Card, Typography, Button, CardContent } from '@material-ui/core/';
-import UserService from "../services/UserService";
+import UserService from "../services/user_service";
 // import { Redirect } from "react-router-dom"
 
 var userService = new UserService();

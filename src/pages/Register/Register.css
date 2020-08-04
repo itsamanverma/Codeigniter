@@ -1,0 +1,106 @@
+.formField {
+    width: 100%;
+}
+.register {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.card {
+    padding: 50px;
+    border: 1px solid #dadce0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: none !important;
+}
+.buttonHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 12px;
+}
+.signInButton {
+    color: #377ae9 !important;
+}
+.RegisterButton {
+    background-color: #377ae9 !important;
+    color: white !important;
+}
+.error {
+    color: #f44336;
+    display: relative;
+    min-height: 13px;
+    margin-left: 14px;
+    margin-right: 14px;
+    font-size: 0.75rem;
+    margin-top: 3px;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+}
+.oneAccount {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+.paddingTopDown {
+    padding: 10px 0;
+}
+.createTxt {
+    color: #202124;
+    font-family: "Google Sans", arial, sans-serif;
+    font-size: 24px;
+}
+.helpTxt {
+    color: #202124;
+    /* margin: 3px 14px 0; */
+    font-size: 0.75rem;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    padding-left: 5px;
+}
+.twoTextField {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.divField{
+    width: 49%;
+}
+
+@media screen and (max-width: 600px) {
+    .hide {
+        display: none !important;
+    }
+    .twoTextField{
+        flex-direction: column;
+    }
+    .divField{
+        width: 100%;
+    }
+    .card{
+        padding: 30px;
+        border: none;
+        width: 100%;
+    }
+    .cardI{
+        width: 100%;
+    }
+    .register{
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 400px) {
+    
+    .card{
+        padding: 30px 10px;
+    }
+}

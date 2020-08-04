@@ -1,0 +1,175 @@
+.App {
+	height: 100%;
+	background-color: #ffffff;
+}
+
+.App-logo {
+	animation: App-logo-spin infinite 0.5s linear;
+	height: 100px;
+	pointer-events: none;
+}
+
+.App-header {
+	/* background-color: #282c34; */
+
+	/* min-height: 100vh; */
+	height: 100%;
+	width: 600px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	-webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+	animation: mymove 5s infinite;
+}
+.css-79elbk {
+	height: 100%;
+	background-color: white;
+}
+._loading_overlay_wrapper {
+	height: auto;
+	background-color: white;
+	height: 100%;
+}
+@-webkit-keyframes mymove {
+	from {
+		left: 0px;
+	}
+	to {
+		left: 800px;
+	}
+}
+.App-link {
+	color: #61dafb;
+}
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes mymove {
+	from {
+		left: 0px;
+	}
+	to {
+		left: 1200px;
+	}
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.center {
+	justify-content: center;
+	align-items: center;
+}
+.justifyCenter {
+	justify-content: center;
+}
+.alignCenter {
+	align-items: center;
+}
+.space_between {
+	justify-content: space-between;
+}
+.fitWidth {
+	width: fit-content;
+}
+.updateDialogMain {
+	.MuiDialog-paper {
+		height: 100%;
+		box-shadow: none !important;
+		background: transparent;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.MuiDialog-paperScrollPaper {
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+	.MuiPaper-elevation24 {
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+}
+.collaboratorDialog {
+	.MuiDialog-paper {
+		height: 100%;
+		box-shadow: none !important;
+		background: transparent;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.MuiDialog-paperScrollPaper {
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+	.MuiPaper-elevation24 {
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+	.MuiBackdrop-root {
+		background-color: #e5e5e5;
+		opacity: 0.4 !important;
+	}
+}
+// .cropperDialog{
+//   .cropImage {
+
+//   }
+// }
+.cropperDialog .cropImage img {
+	max-height: 500px;
+}
+@media screen and (max-width: 800px) {
+	.dashboard {
+		.toolbar {
+			.lastBox {
+				width: 200px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.dashboard {
+		.toolbar {
+			.lastBox {
+				width: 200px;
+				.gridlist {
+					display: none;
+				}
+				.search {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.dashboard {
+		.toolbar {
+			.lastBox {
+				width: fit-content;
+				.setting,
+				.refresh {
+					display: none;
+				}
+			}
+		}
+	}
+}

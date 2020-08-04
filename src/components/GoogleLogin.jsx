@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialButton from './SocialLogin';
-import UserService from '../services/UserService';
+import UserService from '../services/user_service';
 
 var userService = new UserService();
 

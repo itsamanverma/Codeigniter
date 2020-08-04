@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Card, Typography, Button, CardContent } from '@material-ui/core/';
 import axios from "axios";
 import Input from "../components/Input";
-import UserService from "../services/UserService";
+import UserService from "../services/user_service";
 
 var userservice = new UserService();
 export default class EmailVerification extends Component {
