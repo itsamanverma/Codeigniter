@@ -2,6 +2,8 @@ import React from 'react';
 import Register from './pages/Register/Register';
 import './App.scss';
 import Login from "./pages/Login/Login";
+import Forgot from "./pages/Forgot/ForgotPassword";
+import Reset from './pages/reset/reset';
 import {
   BrowserRouter as Router,
   Switch,
@@ -59,6 +61,12 @@ function App() {
             </Route>
             <Route path="/login">
               <Login snackbar={toggleSnackbar} loader={toggleLoader} />
+            </Route>
+            <Route path="/forgot">
+              <Forgot snackbar={toggleSnackbar} loader={toggleLoader} />
+            </Route>
+            <Route path="/reset/:token">
+              <Reset snackbar={toggleSnackbar} loader={toggleLoader} />
             </Route>
           </Switch>
         </Router>
