@@ -1,5 +1,5 @@
 {
-  "name": "reactjs",
+  "name": "fundoo",
   "jest": {
     "verbose": true
   },
@@ -10,7 +10,6 @@
     "@material-ui/icons": "^3.0.1",
     "axios": "^0.18.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
     "firebase": "^5.10.0",
     "form-data": "^2.3.3",
     "jest-enzyme": "^7.0.2",
@@ -22,7 +21,7 @@
     "react-router-dom": "^4.3.1",
     "react-script": "^2.0.5",
     "react-scripts": "2.1.5",
-    "react-social-login": "^3.4.8",
+    "react-social-login": "^3.4.9",
     "react-test-renderer": "^16.8.6",
     "react-toasts": "^3.0.0",
     "typeface-roboto": "0.0.54"
@@ -45,13 +44,13 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.11.1",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-jest": "^23.6.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-adapter-react-16": "^1.15.3",
     "jest": "^23.6.0",
     "jest-enzyme": "^7.0.2"
   },
