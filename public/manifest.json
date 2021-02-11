@@ -6,6 +6,41 @@
       "src": "Google-keep.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "google-keep-120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "google-keep-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "google-keep-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "google-keep-167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "google-keep-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "google-keep-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "google-keep-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
