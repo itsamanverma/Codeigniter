@@ -27,26 +27,16 @@ const Login = (props) => {
 
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
-
-    // setTimeout(()=>{
-    // validate(name)
-
-    // },1000)
   };
   const handleClickShowPassword = () => {
-    // this.setState({ showPassword: !this.state.showPassword })
     setValues({ ...values, showPassword: !values.showPassword });
   };
   useEffect(() => {
-    // validate()
-    // console.log("data is changed", values);
     if (values.email.length > 0)
       validate("email");
 
   }, [values.email])
   useEffect(() => {
-    // validate()
-    // console.log("data is changed pass", values);
     if (values.password.length > 0)
       validate("password");
 
@@ -93,12 +83,6 @@ const Login = (props) => {
 
 
     }
-    // setTimeout(() => {
-    // console.log(" after values name is ", get);
-
-    // }, 5000);
-
-
   }
 
   let login = () => {
@@ -110,7 +94,6 @@ const Login = (props) => {
       return;
     }
     else {
-      // props.loader(true);
       user_service.login(values).then((data) => {
         console.log('data after login', data);
         const obj = data.data;
@@ -193,7 +176,7 @@ const Login = (props) => {
 
             <Button variant="contained" className="loginButton" onClick={login}>
               Login
-      </Button>
+            </Button>
           </div>
           <Link to="/forgot">
             <div className="createButton" style={{ padding: '5px 0' }}>
@@ -201,7 +184,6 @@ const Login = (props) => {
                 </div>
           </Link>
         </div>
-
       </div>
     </div>
   );
