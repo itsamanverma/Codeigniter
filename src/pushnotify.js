@@ -2,7 +2,7 @@ import * as firebase from "firebase";
     
 export const initializeFirebase = () => {
   firebase.initializeApp({
-    apiKey: "AIzaSyAVz0HHLZCmpdFt73l7k5AOyMmY1n4ZQxQ",
+    apiKey: "AIzaSyAVz0HHLZCmpdFt73l7k5AOyMmY1n4ZQx",
     authDomain: "pushnotification-872fa.firebaseapp.com",
     databaseURL: "https://pushnotification-872fa.firebaseio.com",
     projectId: "fundoo-237806",
